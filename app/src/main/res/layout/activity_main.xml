@@ -1,61 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/images"
+    android:layout_height="match_parent">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/nav_bt_bg2"
+        android:id="@+id/top_bar">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/jalikoa"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textColor="#def"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello Jalikoa World!"
-        android:textColor="#FF5722"
-        android:background="#ECEFF1"
-        android:padding="16dp"
-        android:layout_margin="8dp"
-        android:gravity="center"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/myEditText"
-        style="@style/Widget.AppCompat.EditText"
+        android:padding="20dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/app_banner"
+            android:id="@+id/logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_text"
+            android:layout_marginTop="10dp"
+            android:textColor="#dff"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_corner2"
+            android:id="@+id/abot_text"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/navSection"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in"
+                android:backgroundTint="#A62175F3"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/login_btn"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_label"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#083A65"
+                android:layout_marginTop="10dp"
+                android:id="@+id/signup"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner2"
+            android:textColor="#dff"
+            android:padding="15dp"
+            android:text="If you would like to get more please have premium account
+here"
+            android:id="@+id/premiumacc"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/premium"
+            android:background="@drawable/try_bt"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/premium"/>
+    </LinearLayout>
+    </ScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/nav_bott_bg"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="311dp"
-        android:hint="Search Jalikoa"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="161dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/email_24"
+            android:id="@+id/emailIcon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailIcon"
+            android:text="d34calvo@gmail.com"
+            android:id="@+id/email"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/phone_24"
+            android:id="@+id/phoneIcon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Contact us"
+            android:textColor="@color/white"
+            android:id="@+id/contactus"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneIcon"
+            android:layout_alignParentRight="true"
+            android:text="+254 799 311 413"
+            android:id="@+id/phone"/>
+    </RelativeLayout>
+</LinearLayout>
+</RelativeLayout>

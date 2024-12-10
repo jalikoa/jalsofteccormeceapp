@@ -1,80 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_bg"
+    android:gravity="center"
+    android:layout_height="match_parent">
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"
         android:gravity="center">
-        <TextView
-            android:id="@+id/pageTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/signup_label"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/greenColor"
-            android:textSize="30sp"
-            android:textStyle="bold|italic"/>
-        <TextView
-            android:id="@+id/emailLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/email_label"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/material_dynamic_tertiary10"
-            android:textSize="25sp"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/person_24"/>
         <EditText
-            android:id="@+id/emailInput"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:inputType="textEmailSubject"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:id="@+id/SignupEmail"
+            android:textColorHint="@color/white"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_corner"
+            android:padding="15dp"
             android:autofillHints="emailAddress"
-            android:layout_marginBottom="1sp"
-            android:hint="@string/email_label"/>
-        <TextView
-            android:id="@+id/contactLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/phone_label"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/material_dynamic_tertiary10"
-            android:textSize="25sp"/>
+            android:hint="Email"/>
         <EditText
-            android:id="@+id/contactInput"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="1sp"
-            android:autofillHints="phone"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:id="@+id/signupPhone"
+            android:textColorHint="@color/white"
             android:inputType="phone"
-            android:hint="@string/phone_label"/>
-        <TextView
-            android:id="@+id/passwordLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/password_label"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/material_dynamic_tertiary10"
-            android:textSize="25sp"/>
+            android:background="@drawable/rounded_corner"
+            android:padding="15dp"
+            android:autofillHints="phone"
+            android:hint="Phone"/>
         <EditText
-            android:id="@+id/passwordInput"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:autofillHints="password"
-            android:inputType="numberPassword"
-            android:layout_marginTop="1sp"
-            android:hint="@string/password_label"/>
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/white"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_corner"
+            android:padding="15dp"
+            android:id="@+id/signupPassword"
+            android:hint="Password"/>
         <Button
-            android:id="@+id/signUpBtn"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:textColor="@color/secondaryColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_label"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
+            android:id="@+id/SignupButton"
+            android:backgroundTint="#00BCD4"
+            android:text="@string/signup_label"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#D1E4E0"
+            android:text="@string/OrHaveacc"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FD0599"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/login_label"
+            android:text="@string/log_in"/>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/nav_bott_bg"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/email_24"
+                android:id="@+id/emailIcon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailIcon"
+                android:text="d34calvo@gmail.com"
+                android:id="@+id/email"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/phone_24"
+                android:id="@+id/phoneIcon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Contact us"
+                android:textColor="@color/white"
+                android:id="@+id/contactus"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneIcon"
+                android:layout_alignParentRight="true"
+                android:text="+254 799 311 413"
+                android:id="@+id/phone"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

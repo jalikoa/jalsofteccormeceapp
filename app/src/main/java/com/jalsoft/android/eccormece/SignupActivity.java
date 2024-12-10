@@ -1,49 +1,47 @@
 package com.jalsoft.android.eccormece;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignupActivity extends AppCompatActivity {
-    private TextView pageTitle;
-    private Button signupButton;
-    private TextView emailLabel;
-    private EditText emailInput;
-    private TextView contactLabel;
-    private EditText contactInput;
-    private TextView passwordLabel;
-    private EditText passwordInput;
+    Button signup;
+    EditText password,phone,email;
+    TextView login;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        pageTitle = findViewById(R.id.pageTitle);
-        emailLabel = findViewById(R.id.emailLabel);
-        emailInput = findViewById(R.id.emailInput);
-        contactLabel = findViewById(R.id.contactLabel);
-        contactInput = findViewById(R.id.contactInput);
-        passwordLabel = findViewById(R.id.passwordLabel);
-        passwordInput= findViewById(R.id.passwordInput);
-        signupButton = findViewById(R.id.signUpBtn);
-
-        signupButton.setOnClickListener(new View.OnClickListener() {
+        login = findViewById(R.id.login_label);
+        signup = findViewById(R.id.SignupButton);
+        email = findViewById(R.id.SignupEmail);
+        phone = findViewById(R.id.signupPhone);
+        password = findViewById(R.id.signupPassword);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String userInput = contactInput.getText().toString();
-                AlertDialog.Builder builder = new AlertDialog.Builder(SignupActivity.this);
-                builder.setTitle("Popup Title");
-                builder.setMessage("This is Jalikoa's app in production");
-                builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss(); // Close the popup
-                    }
-                });
+            public void onClick(View view) {
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String em,ph,pass;
+                em = email.getText().toString();
+                ph = phone.getText().toString();
+                pass = password.getText().toString();
+                if (em.equals("") || ph.equals("") || pass.equals("")){
+                    Log.d("errorr", "Alll fields required");
+                }
+            }
+        });
 
-    }
-});
     }}

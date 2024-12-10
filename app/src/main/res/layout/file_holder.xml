@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/file_name_bg"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/file_name_bg"
+                android:textColor="#5A5A5A"
+                android:text="How to plant a tree in the dry conditions.pptx"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:id="@+id/fileName"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/download_24"
+                android:elevation="20dp"
+                android:id="@+id/downloadFileBtn"
+                android:contentDescription="To download the file" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By Michael Mboya on how To plant tree in dry conditions"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="#686868"
+                android:layout_below="@id/fileName"
+                android:layout_marginTop="10dp"
+                android:id="@+id/byWho"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/file_name_bg"
+                android:text="On Tues 10 Aug 2003"
+                android:textSize="12sp"
+                android:textColor="#0A1868"
+                android:layout_below="@id/byWho"
+                android:padding="5dp"
+                android:id="@+id/postedTime"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

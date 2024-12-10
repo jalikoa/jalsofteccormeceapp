@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main_body"
+    android:background="#f1f1f9ff"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add new product"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/banner"
+        android:textColor="#99B57E47"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/banner"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:id="@+id/scrollable">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cred_table">
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Product Name:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Product name"
+                        android:id="@+id/product_name"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Product SKU:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Product serial"
+                        android:id="@+id/serial"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Product Quantity:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Quantity available"
+                        android:id="@+id/quantity"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Expiry date:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Expiring"
+                        android:id="@+id/expiry"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Product Price:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Product price"
+                        android:id="@+id/price"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:text="Description:"
+                        android:textSize="16sp"/>
+                    <EditText android:layout_height="50dp"
+                        android:hint="Description"
+                        android:id="@+id/description"
+                        android:autofillHints="name"
+                        android:inputType="text"
+                        android:layout_weight="1"/>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/nav">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allow stock tracking"
+                    android:id="@+id/stockTracking"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notify me on low stock"
+                    android:id="@+id/lowAlert"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allow expiry tracking"
+                    android:checked="true"
+                    android:id="@+id/expiryTracking"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="50dp"
+                    android:text="Add product"
+                    android:background="@drawable/add_prr_bg"
+                    android:backgroundTint="#4CAF50"
+                    android:paddingEnd="50dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

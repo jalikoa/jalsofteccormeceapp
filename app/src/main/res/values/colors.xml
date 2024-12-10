@@ -5,4 +5,7 @@
     <color name="primaryColor">#FF5722</color>
     <color name="secondaryColor">#ECEFF1</color>
     <color name="greenColor">#ECE0</color>
+        <color name="backgroundColor">#121212</color>
+        <color name="textColorPrimary">#FFFFFF</color>
+        <color name="textColorSecondary">#BBBBBB</color>
 </resources>

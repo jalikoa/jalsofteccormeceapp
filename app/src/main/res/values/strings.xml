@@ -4,4 +4,17 @@
     <string name="phone_label">Phone</string>
     <string name="password_label">Password</string>
     <string name="signup_label">Sign up</string>
+    <string name="name_label">Name</string>
+    <string name="rem">Buy fully</string>
+    <string name="hire">Only hire for now</string>
+    <string name="search">Go</string>
+    <string name="log_in">Log in</string>
+    <string name="jalikoa">Jalsoft</string>
+    <string name="appName_search">Jalsoft search</string>
+    <string name="OrHaveacc">Or have an account?</string>
+    <string name="OrHavenoacc">Or have no account</string>
+    <string name="premium">Try premium</string>
+    <string name="about_text">Welcome to Jalsoft business management app! Are you struglling with managing your business do not worry, Jalsoft get you sotted with this app at hand you can seamlessly keep track of your business assets.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
